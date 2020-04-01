@@ -21,6 +21,7 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
+bindkey -v '^R' history-incremental-search-backward
 
 export KEYTIMEOUT=1
 
@@ -69,3 +70,7 @@ bindkey -s '^o' 'lfcd\n'  # zsh
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+export HISTSIZE=10000
+export SAVEHIST=$HISTSIZE
+export HISTFILE="$ZDOTDIR/.zsh_history"
