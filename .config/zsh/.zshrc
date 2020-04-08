@@ -87,4 +87,3 @@ export HISTFILE="$ZDOTDIR/.zsh_history"
 setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
-
