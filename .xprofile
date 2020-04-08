@@ -5,11 +5,11 @@
 
 # Fix Gnome Apps Slow  Start due to failing services
 # Add this when you include flatpak in your system
-dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+#dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
-mpd &			# music player daemon-you might prefer it as a service though
-remaps &		# run the remaps script, switching caps/esc and more; check it for more info
-setbg /home/kmax/tmp/wallpapers &			# set the background with the `setbg` script
+#mpd &			# music player daemon-you might prefer it as a service though
+#remaps &		# run the remaps script, switching caps/esc and more; check it for more info
+setbg /tmp/Landscapes 2> ~/.xprofile.log &
 #xrdb ~/.config/Xresources &	# Uncomment to use Xresources colors/settings on startup
 xcompmgr &		# xcompmgr for transparency
 $STATUSBAR &		# start the statusbar

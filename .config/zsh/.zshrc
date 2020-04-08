@@ -83,3 +83,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export HISTSIZE=10000
 export SAVEHIST=$HISTSIZE
 export HISTFILE="$ZDOTDIR/.zsh_history"
+
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+
