@@ -7,8 +7,8 @@
 # export TERMINAL="st"
 
 # #---Basic Definitions---# #
-set $inner_gaps 15
-set $outer_gaps 15
+set $inner_gaps 0
+set $outer_gaps 0
 set $term --no-startup-id $TERMINAL
 set $mod Mod1
 set $stoprec --no-startup-id dmenurecord kill
