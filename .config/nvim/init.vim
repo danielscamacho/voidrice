@@ -20,6 +20,7 @@ Plug 'tpope/vim-commentary'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ap/vim-css-color'
 call plug#end()
 
 set bg=light
@@ -52,6 +53,11 @@ set clipboard+=unnamedplus
 " Nerd tree
 	map <leader>n :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    if has('nvim')
+        let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
+    else
+        let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
+    endif
 
 " vimling:
 	nm <leader>d :call ToggleDeadKeys()<CR>
